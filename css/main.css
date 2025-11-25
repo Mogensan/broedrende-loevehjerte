@@ -16,8 +16,67 @@
 --background-color-dark: #111111;
 }
 
-{ /*reset css*/
+* { /*reset css*/
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+}
+
+.body,html {
+    width: var(--width-full);
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    background-color: var(--color-primary);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    gap: var(--grid-gap);
+    width: var(--width-full);
+}
+
+
+.navigation {
+    background-color: var(--background-color-navigation);
+    height: 80px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    top:0;
+    width: var(--width-full);
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-container {
+    width: var(--widt-12col);
+}
+
+.menu-container ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu-container ul li a{
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--background-color-light);
+}
+.menu-container ul li a:hover {
+    color: var(--color-secondary);
+}
+
+.menu-container ul li {
+    border-right: 1px solid var(--background-color-light);
+}
+.menu-container ul li:last-child {
+    border-right: none;
 }
