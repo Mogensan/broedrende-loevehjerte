@@ -76,7 +76,7 @@ padding: 0;
 .menu-container ul li a{
     padding: 0 10px;
     text-decoration: none;
-    text-transform: uppercase;
+    
     color: var(--background-color-light);
 }
 .menu-container ul li a:hover {
@@ -87,7 +87,7 @@ padding: 0;
     padding: 0 10px;
 }
 
-/* Logo positioned top-left without affecting nav flow */
+
 .navigation .logo {
     position: absolute;
     left: calc(var(--padding-default));
@@ -120,3 +120,23 @@ padding: 0;
     margin: 0;
     border-bottom: 3px solid var(--background-color-dark);
 }
+
+.om_stykket {
+    width: 90%;
+    display: grid;
+    height: fit-content;
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px auto;
+    gap: var(--grid-gap);
+    margin: 0 auto;
+}
+
+.om_stykket_headline {
+    height: 60px;
+    color: var(--color-secondary);
+    border-bottom: 1px solid var(--background-color-light);
+    font-weight: 700;
+    margin: 70px 0 0 0;
+    font-size: 37px;
+}
+
