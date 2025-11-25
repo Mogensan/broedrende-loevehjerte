@@ -140,3 +140,14 @@ padding: 0;
     font-size: 37px;
 }
 
+.om_stykket_text {
+    font-size: 23px;
+    color: var(--background-color-light);
+    margin-bottom: 70px;
+    width: 45%;
+    line-height: 1.8; 
+}
+
+.om_stykket_text p {
+    margin-bottom: 1.5em; 
+}
