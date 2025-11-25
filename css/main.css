@@ -1,0 +1,23 @@
+
+:root {
+/*dimensions*/
+--width-full: 100%;
+--widt-12col: 1200px;
+
+/*grid settings*/
+--grid-gap: 20px;
+--padding-default: 20px;
+
+/*colors*/
+--color-primary: #543477;
+--color-secondary: #F27821;
+--background-color-light: #F5F5F5;
+--background-color-navigation: #00000080;
+--background-color-dark: #111111;
+}
+
+{ /*reset css*/
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
