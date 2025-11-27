@@ -48,24 +48,59 @@
         </div>
     </section>
 
-    <div class="tidligere_forstillinger">
+     <!--Tidligere forestillinger-->
+    <section class="tidligere_forstillinger">
         <div class="tidligere_forstillinger_headline">
             Tidligere forestillinger
         </div>
-        <div class="tidligere_forstillinger_content">
-            <div class="forestilling">
-                <img src="Billeder/forestilling1.png" alt="Forestilling 1">
-                <div class="forestilling_title"></div>
+        <div class="slideshow css-only" aria-label="Tidligere forestillinger slideshow">
+            <input type="radio" name="slider" id="s1" class="slide-toggle" checked>
+            <input type="radio" name="slider" id="s2" class="slide-toggle">
+            <input type="radio" name="slider" id="s3" class="slide-toggle">
+            <input type="radio" name="slider" id="s4" class="slide-toggle">
+
+            <div class="slides">
+                <div class="slide s1">
+                    <img src="Billeder/Kejserens nye klæder.png" alt="Forestilling 1">
+                    <a href="https://eatskarntyden.dk/galleri/" class="forestilling_title forestilling_link" target="_blank">Se Billeder</a>
+                </div>
+                <div class="slide s2">
+                    <img src="Billeder/Klodshans.png" alt="Forestilling 2">
+                    <a href="https://eatskarntyden.dk/galleri/" class="forestilling_title forestilling_link" target="_blank">Se Billeder</a>
+                </div>
+                <div class="slide s3">
+                    <img src="Billeder/Rædhætte.png" alt="Forestilling 3">
+                    <a href="https://eatskarntyden.dk/galleri/" class="forestilling_title forestilling_link" target="_blank">Se Billeder</a>
+                </div>
+                <div class="slide s4">
+                    <img src="Billeder/Oliver Twist.png" alt="Forestilling 4">
+                    <a href="https://eatskarntyden.dk/galleri/" class="forestilling_title forestilling_link" target="_blank">Se Billeder</a>
+                </div>
             </div>
-            <div class="forestilling">
-                <img src="Billeder/forestilling2.png" alt="Forestilling 2">
-                <div class="forestilling_title"></div>
+
+         
+            <div class="nav prevs">
+                <label for="s3" class="prev prev1" aria-hidden="true">&#10094;</label>
+                <label for="s1" class="prev prev2" aria-hidden="true">&#10094;</label>
+                <label for="s2" class="prev prev3" aria-hidden="true">&#10094;</label>
+                <label for="s3" class="prev prev4" aria-hidden="true">&#10094;</label>
             </div>
-            <div class="forestilling">
-                <img src="Billeder/forestilling3.png" alt="Forestilling 3">
-                <div class="forestilling_title"></div>
+            <div class="nav nexts">
+                <label for="s2" class="next next1" aria-hidden="true">&#10095;</label>
+                <label for="s3" class="next next2" aria-hidden="true">&#10095;</label>
+                <label for="s4" class="next next3" aria-hidden="true">&#10095;</label>
+                <label for="s1" class="next next4" aria-hidden="true">&#10095;</label>
+            </div>
+
+        
+            <div class="controls">
+                <label for="s1" class="dot" aria-label="Slide 1"></label>
+                <label for="s2" class="dot" aria-label="Slide 2"></label>
+                <label for="s3" class="dot" aria-label="Slide 3"></label>
+                <label for="s4" class="dot" aria-label="Slide 4"></label>
             </div>
         </div>
-    </div>
+    </section>
 </body>
+<script src="js/slider.js" defer></script>
 </html>
