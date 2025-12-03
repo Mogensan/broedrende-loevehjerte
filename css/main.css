@@ -866,3 +866,53 @@ padding: 0;
     display: block;
 }
 
+
+@media (max-width: 900px) {
+    .footer {
+        height: auto;
+        padding-bottom: 10px;
+    }
+    .footer_address {
+        margin-left: 0;
+        width: auto;
+        margin-top: 8px;
+        padding-right: 140px;
+    }
+    .footer_icons {
+        right: 12px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer {
+        height: auto;
+        padding: 18px 12px;
+    }
+    .footer_text {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        padding: 8px 10px;
+        font-size: 18px;
+    }
+    .footer_address {
+        position: static;
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-top: 8px;
+        padding: 0;
+    }
+    .footer_icons {
+        position: static;
+        transform: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        right: auto;
+        margin-right: 0;
+    }
+    .footer_icons a img { width: 20px; height: 20px; }
+}
+
