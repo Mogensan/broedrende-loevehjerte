@@ -64,7 +64,8 @@ padding: 0;
 .menu-container {
     max-width: var(--widt-12col);
     width: 100%;
-    padding: 0 var(--padding-default);
+    /* Add left padding to avoid overlap with absolute-positioned logo */
+    padding: 0 var(--padding-default) 0 calc(var(--padding-default) + 140px);
     margin: 0 auto;
 }
 
@@ -91,6 +92,57 @@ padding: 0;
     padding: 0 10px;
 }
 
+/* Boxed navigation link styles: high-opacity boxes behind each nav link */
+.menu-container ul li a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #11111133; /* high opacity box */
+    color: #F5F5F5 /* dark text for readability */
+    
+}
+
+
+@media (max-width: 900px) {
+    .menu-container ul li a { padding: 7px 12px; border-radius: 6px; }
+}
+
+@media (max-width: 600px) {
+    .menu-container ul li a { padding: 6px 10px; border-radius: 6px; font-size: 14px; }
+}
+
+/* Mobile phone optimization: ensure nav fits */
+@media (max-width: 480px) {
+    .navigation {
+        height: 65px;
+        padding: 10px;
+    }
+
+    .menu-container {
+        padding: 0 10px 0 50px;
+    }
+
+    .menu-container ul {
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .menu-container ul li {
+        padding: 0 2px;
+    }
+
+    .menu-container ul li a {
+        padding: 5px 8px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
+    .navigation .logo img {
+        height: 32px;
+    }
+}
+
 
 .navigation .logo {
     position: absolute;
@@ -112,9 +164,28 @@ padding: 0;
     }
 }
 
+/* Top navigation social icons (right side) */
+.nav-social {
+    position: absolute;
+    right: calc(var(--padding-default));
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    z-index: 99999 !important;
+    margin-right: 50px;
+}
+.nav-social a img { width: 20px; height: 20px; display: block; }
+
+@media (max-width: 600px) {
+    /* hide top icons on small screens to keep nav compact */
+    .nav-social { display: none; }
+}
+
 .hero {
-    background-image: url(../Billeder/Headerimg2.jpg);
-    min-height: 750px;
+    background-image: url(../Billeder/Headerimg3.jpg);
+    min-height: 850px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -153,7 +224,7 @@ padding: 0;
 }
 
 .om_stykket_text {
-    font-size: 23px;
+    font-size: 21px;
     color: var(--background-color-light);
     flex: 1;
     min-width: 45%;
@@ -161,6 +232,7 @@ padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: auto;
 }
 
 .om_stykket_text p {
@@ -218,7 +290,7 @@ padding: 0;
 }
 
 .forestilling img {
-    width: 100%;
+    width: 50%;
     height: 300px;
     object-fit: cover;
     display: block;
@@ -234,10 +306,11 @@ padding: 0;
     position: relative;
     width: 90%;
     max-width: 90%;
-    margin: 20px 0 60px 0;
+    margin: 20px 0 60px 60px;
     overflow: visible;
     border-radius: 8px;
     padding: 0 40px; 
+    justify-content: center;
 }
 
 .slideshow.css-only .slide-toggle { display: none; }
@@ -261,12 +334,13 @@ padding: 0;
 }
 
 .slideshow.css-only .slide img {
-    width: 100%;
-    height: 800px;
+    width: 80%;
+    height: 700px;
     object-fit: contain;
     display: block;
     border-radius: 6px;
     text-align: center;
+    margin-left: auto;
 }
 
 .slideshow.css-only .slide .forestilling_title {
@@ -382,7 +456,7 @@ padding: 0;
 }
 
 .skuespillerne_text {
-    font-size: 23px;
+    font-size: 21px;
     color: var(--background-color-light);
     flex: 1;
     min-width: 45%;
@@ -390,6 +464,7 @@ padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    margin-top: auto;
 }
 
 .skuespillerne_text p {
@@ -411,7 +486,7 @@ padding: 0;
     object-fit: cover;
 }
 
-/* Responsive styles for skuespillerne section */
+
 @media (max-width: 768px) {
     .skuespillerne {
         width: 95%;
@@ -490,19 +565,7 @@ padding: 0;
 }
 
 @media (max-width: 768px) {
-    .navigation {
-        height: 70px;
-        padding: 15px;
-    }
-
-    .menu-container ul {
-        gap: 15px;
-    }
-
-    .menu-container ul li a {
-        padding: 0 8px;
-        font-size: 14px;
-    }
+    
 
     .hero {
         min-height: 600px;
@@ -564,29 +627,31 @@ padding: 0;
     .navigation {
         height: 60px;
         padding: 10px;
-        align-items: stretch;
+        align-items: center;
     }
 
     .menu-container {
-        padding: 0 10px;
+        padding: 0 10px 0 60px; /* keep right padding small, leave room on left for logo */
         width: 100%;
     }
 
+    /* Keep nav links horizontal on small screens; just reduce size and allow wrapping */
     .menu-container ul {
-        flex-direction: column;
-        gap: 10px;
-        justify-content: flex-end;
-        align-items: flex-end;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
         padding-right: 10px;
     }
 
     .menu-container ul li {
-        padding: 5px 0;
+        padding: 0 4px;
     }
 
     .menu-container ul li a {
-        padding: 0 5px;
-        font-size: 12px;
+        padding: 6px 8px;
+        font-size: 13px;
     }
 
     .navigation .logo {
@@ -847,6 +912,7 @@ padding: 0;
     margin-left: 755px;
     width: 500px;
     margin-top: -55px;
+    justify-content: center;
 }
 
 .footer_icons {
