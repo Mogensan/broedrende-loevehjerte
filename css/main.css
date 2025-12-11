@@ -988,7 +988,7 @@ padding: 0;
 /* second page*/
 
 .hero-info {
-    background-image: url(../Billeder/Headerimginfo.png);
+    background-image: url(../Billeder/Headerimgsubpage.jpg);
     min-height: 850px;
     background-size: cover;
     background-position: center center;
@@ -1018,4 +1018,34 @@ padding: 0;
     justify-content: center;
     align-items: center;
     
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color-light);
+    
+}
+
+.om_stedet  {
+    background-color: #111111BF;
+    margin-left: 400px;
+    font-size: 20px;
+    padding: 0 50px 40px 50px;
+    width: 630px;
+    height: fit-content;
+}
+
+.om_stedet h4 {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: var(--color-secondary);
+}
+
+.om_stedet_img {
+    padding-top: 50px;
+    padding-right:400px ;
+  
 }
