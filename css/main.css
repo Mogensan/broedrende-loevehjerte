@@ -38,7 +38,7 @@ padding: 0;
 .container {
     display: grid;
     grid-template-rows: auto;
-    gap: var(--grid-gap);
+ 
     width: var(--width-full);
 }
 
@@ -982,3 +982,40 @@ padding: 0;
     .footer_icons a img { width: 20px; height: 20px; }
 }
 
+
+
+
+/* second page*/
+
+.hero-info {
+    background-image: url(../Billeder/Headerimginfo.png);
+    min-height: 850px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    width: var(--width-full);
+    border-bottom: 3px solid var(--background-color-dark);
+}
+
+.hero-info-container {
+    width: var(--width-full);
+    max-width: var(--widt-12col);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.separator {
+    width: var(--width-full);
+    background-color: #111111BF;
+    color: var(--background-color-light);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
