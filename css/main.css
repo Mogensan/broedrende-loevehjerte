@@ -115,31 +115,89 @@ padding: 0;
 @media (max-width: 480px) {
     .navigation {
         height: 65px;
-        padding: 10px;
+        padding: 8px 5px;
     }
 
     .menu-container {
-        padding: 0 10px 0 50px;
+        padding: 0 5px 0 65px;
     }
 
     .menu-container ul {
-        gap: 6px;
+        gap: 4px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .menu-container ul li {
-        padding: 0 2px;
+        padding: 0 1px;
     }
 
     .menu-container ul li a {
-        padding: 5px 8px;
-        font-size: 12px;
-        border-radius: 5px;
+        padding: 4px 6px;
+        font-size: 11px;
+        border-radius: 4px;
+    }
+
+    .navigation .logo {
+        left: 5px;
     }
 
     .navigation .logo img {
-        height: 32px;
+        height: 30px;
+    }
+
+    .nav-social {
+        margin-right: 5px;
+        gap: 6px;
+    }
+
+    .nav-social a img {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 375px) {
+    .navigation {
+        height: 60px;
+        padding: 6px 3px;
+    }
+
+    .menu-container {
+        padding: 0 3px 0 55px;
+    }
+
+    .menu-container ul {
+        gap: 3px;
+    }
+
+    .menu-container ul li {
+        padding: 0;
+    }
+
+    .menu-container ul li a {
+        padding: 3px 5px;
+        font-size: 10px;
+        border-radius: 3px;
+    }
+
+    .navigation .logo {
+        left: 3px;
+    }
+
+    .navigation .logo img {
+        height: 26px;
+    }
+
+    .nav-social {
+        margin-right: 0;
+        gap: 4px;
+    }
+
+    .nav-social a img {
+        width: 14px;
+        height: 14px;
     }
 }
 
@@ -631,7 +689,7 @@ padding: 0;
     }
 
     .menu-container {
-        padding: 0 10px 0 60px; /* keep right padding small, leave room on left for logo */
+        padding: 0 10px 0 80px; /* keep right padding small, leave room on left for logo */
         width: 100%;
     }
 
@@ -729,16 +787,17 @@ padding: 0;
 
 
 @media (max-width: 400px) {
-    .navigation {
-        height: 55px;
+    .menu-container {
+        padding: 0 4px 0 60px;
     }
 
-    .navigation .logo img {
-        height: 28px;
+    .menu-container ul {
+        gap: 3px;
     }
 
     .menu-container ul li a {
-        font-size: 11px;
+        padding: 3px 5px;
+        font-size: 10px;
     }
 
     .hero {
@@ -876,6 +935,25 @@ padding: 0;
 }
 
 .btn.buy-btn:hover { background: #e56a16; }
+
+/* Read more button */
+.btn.read-more {
+    display: inline-block;
+    margin-top: 16px;
+    background: var(--color-secondary);
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-weight: 700;
+}
+.btn.read-more:hover { background: #472c66; }
+
+/* Position the read-more button at the bottom center of the text box */
+.om_stedet .btn.read-more {
+    margin-top: auto;       /* push to bottom within flex column */
+    align-self: center;     /* center horizontally */
+}
 
 @media (max-width: 768px) {
     .event-card { width: 520px; max-width: 90%; }
@@ -1028,24 +1106,101 @@ padding: 0;
     
 }
 
+.content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    align-items: stretch;
+    padding: 0;
+}
+
+/* Add top/bottom gap only around the group, not between sections */
+.content:first-of-type { padding-top: 50px; }
+.content:last-of-type { padding-bottom: 50px; }
+
 .om_stedet  {
     background-color: #111111BF;
-    margin-left: 400px;
     font-size: 20px;
-    padding: 0 50px 40px 50px;
-    width: 630px;
-    height: fit-content;
+    padding: 50px;
+    flex: 0 0 50%;
+    color: var(--background-color-light);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
 }
 
 .om_stedet h4 {
-    padding-top: 50px;
     padding-bottom: 20px;
     font-size: 30px;
     color: var(--color-secondary);
 }
 
 .om_stedet_img {
-    padding-top: 50px;
-    padding-right:400px ;
-  
+    flex: 0 0 50%;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    box-sizing: border-box;
+}
+
+.om_stedet_img a {
+    width: 100%;
+    display: block;
+}
+
+.om_stedet_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Increase paragraph spacing in the second (content-reverse) text box */
+.content.content-reverse .om_stedet p { margin-bottom: 1.7em; }
+.content.content-reverse .om_stedet p:last-child { margin-bottom: 0; }
+
+/* Responsive for om_stedet section */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        width: 95%;
+        padding: 0;
+    }
+    .content:first-of-type { padding-top: 30px; }
+    .content:last-of-type { padding-bottom: 30px; }
+
+    .om_stedet {
+        min-width: 100%;
+        padding: 30px 20px;
+        font-size: 18px;
+    }
+
+    .om_stedet h4 {
+        font-size: 26px;
+    }
+
+    .om_stedet_img {
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 100%;
+        padding: 0 10px; /* keep horizontal padding, remove vertical gap */
+    }
+    .content:first-of-type { padding-top: 20px; }
+    .content:last-of-type { padding-bottom: 20px; }
+
+    .om_stedet {
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+
+    .om_stedet h4 {
+        font-size: 22px;
+        padding-bottom: 15px;
+    }
 }
