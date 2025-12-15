@@ -1,4 +1,4 @@
-// Make slideshow images clickable and add keyboard/button navigation
+
 (() => {
   const slideshow = document.querySelector('.slideshow.css-only');
   if (!slideshow) return;
@@ -8,7 +8,6 @@
   const prevButtons = slideshow.querySelectorAll('.prev');
   const nextButtons = slideshow.querySelectorAll('.next');
 
-  // Make images clickable - click on image to select it
   slides.forEach((slide, index) => {
     slide.style.cursor = 'pointer';
     slide.addEventListener('click', () => {
@@ -16,7 +15,6 @@
     });
   });
 
-  // Make arrow buttons work
   prevButtons.forEach((btn) => {
     btn.style.cursor = 'pointer';
   });
@@ -24,7 +22,6 @@
     btn.style.cursor = 'pointer';
   });
 
-  // Keyboard arrow navigation - works anywhere on the page
   document.addEventListener('keydown', (e) => {
     const currentChecked = slideshow.querySelector('input[type="radio"]:checked');
     const currentIndex = Array.from(radios).indexOf(currentChecked);
