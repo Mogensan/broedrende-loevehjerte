@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "broedrende-loevehjerte hjemmeside"
+	},
+	"extensions": {
+		"recommendations": [
+			"github.copilot",
+			"github.copilot-chat"
+		]
+	}
+}
