@@ -24,7 +24,7 @@ margin: 0;
 padding: 0;
 }
 
-.body,html {
+body, html {
     width: var(--width-full);
     font-family: "Roboto", sans-serif;
     position: relative;
@@ -78,29 +78,21 @@ padding: 0;
     flex-wrap: wrap;
 }
 
-.menu-container ul li a{
-    padding: 0 10px;
+.menu-container ul li a {
+    display: inline-block;
     text-decoration: none;
-    
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #11111133;
     color: var(--background-color-light);
 }
-.menu-container ul li a:hover {
-    color: var(--color-secondary);
-}
+.menu-container ul li a:hover { color: var(--color-secondary); }
 
 .menu-container ul li {
     padding: 0 10px;
 }
 
 
-.menu-container ul li a {
-    display: inline-block;
-    padding: 8px 14px;
-    border-radius: 8px;
-    background: #11111133; 
-    color: #F5F5F5 
-    
-}
 
 
 @media (max-width: 900px) {
@@ -343,19 +335,7 @@ padding: 0;
     margin-bottom: 70px;
 }
 
-.forestilling {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    border-radius: 8px;
-}
 
-.forestilling img {
-    width: 50%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-}
 
 .forestilling_title {
     background-color: var(--background-color-light);
