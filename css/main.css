@@ -368,7 +368,7 @@ body, html {
     flex: 0 0 20%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     transition: flex-basis 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
     opacity: 0.9;
     justify-content: flex-end;
@@ -380,8 +380,7 @@ body, html {
     object-fit: contain;
     display: block;
     border-radius: 6px;
-    text-align: center;
-    margin-left: auto;
+    margin: 0 auto;
 }
 
 .slideshow.css-only .slide .forestilling_title {
@@ -391,7 +390,7 @@ body, html {
     text-align: center;
     font-weight: 700;
     width: fit-content;
-    margin: 0 auto;
+    margin-top: 8px;
 }
 
 .slideshow.css-only .slide .forestilling_link {
